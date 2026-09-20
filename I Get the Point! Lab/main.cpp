@@ -23,7 +23,35 @@
 
 using namespace std;
 
-
+class point{
+private:
+    double x;
+    double y;
+    
+public:
+    point(double xValue, double yValue){
+        x = xValue;
+        y = yValue;
+    }
+    
+    
+    double operator-(const point& other) const {
+        double xDifference = other.x - x;
+        double yDifference = other.y - y;
+        
+        return sqrt(xDifference*xDifference + yDifference*yDifference);
+    }
+    
+    
+    bool operator==(const point& other) const {
+        return x == other.x&& y == other.y;
+    }
+    bool operator!=(const point& other) const {
+        return!(*this==other);
+    }
+    
+    
+};
 
 
 int main() {
