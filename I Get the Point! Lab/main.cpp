@@ -53,13 +53,17 @@ public:
         return point(middlex, middley);
     }
                                             
-                                
+    friend ostream& operator<<(ostream& output, const point& point) {
+        output << "(" << point.x << "," << point.y << ")";
+        return output;
+    }
     
     
 };
 
 
 int main() {
+    
     
   
     return EXIT_SUCCESS;
