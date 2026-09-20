@@ -13,10 +13,6 @@
  */
 
 
-
-
-
-
 #include <iostream>
 #include <cmath>
 
@@ -49,6 +45,15 @@ public:
     bool operator!=(const point& other) const {
         return!(*this==other);
     }
+    
+    point operator/(const point& other) const{
+        double middlex = (x + other.x)/2;
+        double middley = (y + other.y)/2;
+        
+        return point(middlex, middley);
+    }
+                                            
+                                
     
     
 };
