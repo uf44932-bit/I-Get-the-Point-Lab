@@ -63,7 +63,13 @@ public:
 
 
 int main() {
+    point p1(2, 1);
+    point p2(3.4, -1);
     
+    cout << "Distance: " << p1 -p2 << endl;
+    cout << "Equal: " << (p1 == p2) << endl;
+    cout << "Not equal: " << (p1 != p2) << endl;
+    cout << "Midpoint: " << p1/p2 << endl;
     
   
     return EXIT_SUCCESS;
